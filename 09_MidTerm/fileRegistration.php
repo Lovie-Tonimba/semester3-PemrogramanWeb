@@ -19,8 +19,6 @@ $data = $_SESSION['form_data'];
 <body>
     <div class="container">
         <h1>Registration Successful!</h1> <br>
-        <p> 🌸 Thank you for joining our Volunteer Program 🌸</p>
-
         <div class="result-box">
             <h2>Personal Information</h2>
             <p><strong>Full Name :</strong> <?= htmlspecialchars($data['fullName']) ?></p>
