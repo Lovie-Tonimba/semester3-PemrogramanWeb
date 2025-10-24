@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Volunteer Registration</title>
+    <link rel="stylesheet" href="cssRegistration.css">
+</head>
+<body>
+    <div class="container">
+        <h1>FORM REGISTRATION</h1>
+
+        <h2>Personal Information</h2>
+        <form action="processRegistration.php" method="post" enctype="multipart/form-data">
+
+            <table>
+                <tr>
+                    <td><label for="fullName">Full Name :</label></td>
+                    <td><input type="text" name="fullName" id="fullName"></td>
+                </tr>
+
+                <tr>
+                    <td><label for="email">Email Address :</label></td>
+                    <td><input type="email" name="email" id="email"></td>
+                </tr>
+
+                <tr>
+                    <td><label for="phoneNumber">Phone Number :</label></td>
+                    <td><input type="tel" name="phoneNumber" id="phoneNumber"></td>
+                </tr>
+
+                <tr>
+                    <td><label for="dateOfBirth">Date of Birth :</label></td>
+                    <td><input type="date" name="dateOfBirth" id="dateOfBirth"></td>
+                </tr>
+
+                <tr>
+                    <td>Gender :</td>
+                    <td>
+                        <input type="radio" name="gender" value="Male"> Male
+                        <input type="radio" name="gender" value="Female"> Female
+                    </td>
+                </tr>
+
+                <tr>
+                    <td><label for="address">Address :</label></td>
+                    <td><input type="text" name="address" id="address"></td>
+                </tr>
+
+                <tr>
+                    <td colspan="2">
+                        <label for="reason">Why do you want to volunteer?</label><br>
+                        <textarea name="reason" id="reason" rows="3" cols="40">Because I...</textarea>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td colspan="2">
+                        <label for="experience">Previous volunteering experience?</label><br>
+                        <textarea name="experience" id="experience" rows="3" cols="40">I have experience in...</textarea>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td><label for="file">Upload CV in PDF form:</label></td>
+                    <td><input type="file" name="file" id="file" accept=".pdf"></td>
+                </tr>
+
+                <tr>
+                    <td><label for="payment">Upload Proof of Payment:</label></td>
+                    <td><input type="file" name="payment" id="payment" accept=".jpg, .jpeg, .png"></td>
+                </tr>
+            </table>
+
+            <h2>Volunteer Details</h2>
+            <table>
+                <tr>
+                    <td><label for="role">Preferred Role :</label></td>
+                    <td>
+                        <select name="role" id="role">
+                            <option value="Welcoming Staff">Welcoming Staff</option>
+                            <option value="Logistics Assistant">Logistics Assistant</option>
+                            <option value="Directional Guide">Directional Guide</option>
+                            <option value="Media Documenter">Media Documenter</option>
+                            <option value="Social Media Helper">Social Media Helper</option>
+                            <option value="Activity Assistant">Activity Assistant</option>
+                            <option value="Field Coordinator Helper">Field Coordinator Helper</option>
+                        </select>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td colspan="2">
+                        <label>Preferred Duration :</label><br>
+                        <input type="checkbox" name="schedule[]" value="Two Weeks"> Two Weeks<br>
+                        <input type="checkbox" name="schedule[]" value="One Month"> One Month<br>
+                        <input type="checkbox" name="schedule[]" value="Two Months"> Two Months
+                    </td>
+                </tr>
+            </table>
+
+            <p style="font-weight: bold; margin-top: 15px;">
+                <label>
+                    <input type="checkbox" name="agree" id="agree">
+                    I agree to the terms and conditions
+                </label>
+            </p>
+
+            <div class="form-buttons">
+                <input type="reset" name="clear" value="Clear">
+                <input type="submit" name="submit" value="Submit Registration">
+            </div>
+        </form>
+    </div>
+</body>
+</html>
